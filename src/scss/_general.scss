@@ -1,0 +1,43 @@
+$cor-primaria: #141414;
+$titulo-1: #e5e5e5;
+
+$fonte-1: 'Inter', sans-serif;
+$fonte-2: 'Roboto', sans-serif;
+
+// Variáveis do grid
+$n-device: 1366px;
+$l-device: 1200px;
+$m-device: 768px;
+$s-device: 480px;
+
+// Mixin de media-querie
+@mixin d($size) {
+  @if $size==n {
+    @media screen and (min-width: $l-device) and (max-width: #{$n-device}) {
+      @content;
+    }
+  }
+
+  @else if $size==l {
+    @media screen and (max-width: $l-device) {
+      @content;
+    }
+  }
+
+  @else if $size==m {
+    @media screen and (min-width: $m-device) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  }
+
+  @else if $size==s {
+    @media screen and (max-width: #{$m-device - 1}) {
+      @content;
+    }
+  }
+}
+
+body {
+  background-color: $cor-primaria;
+  font-family: $fonte-1;
+}
