@@ -3,7 +3,7 @@
 .next/
 node_modules/
 dist/
-
+.parcel-cache
 ### Sass ###
 .sass-cache/
 *.css.map
