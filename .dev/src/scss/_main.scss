@@ -1,0 +1,145 @@
+.header {
+  background-color: $cor-primaria;
+  padding: 20px 0px;
+
+  &__container {
+    max-width: 992px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  #navMenu {
+    margin-left: 10px;
+  }
+
+  #navMenu>span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: #fff;
+  }
+
+  #navMenu>span:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  #navMenu,
+  #navMenu>span {
+    transition: all .4s ease-in-out;
+  }
+
+  #navMenu.active {
+    transition-delay: 0.8s;
+  }
+
+  #navMenu.active>span:nth-child(2) {
+    width: 0;
+  }
+
+  #navMenu.active>span:nth-child(1),
+  #navMenu.active>span:nth-child(3) {
+    transition-delay: .4s;
+  }
+
+  #navMenu.active>span:nth-child(1) {
+    transform: translateY(9px);
+  }
+
+  #navMenu.active>span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+  }
+
+  &__mobile {
+    position: relative;
+  }
+
+  &__nav {
+    display: none;
+    left: -100vh;
+    top: 100%;
+    transition: .4s all ease-in-out;
+
+
+    &.ativo {
+      z-index: 998;
+      display: block;
+      position: absolute;
+      background-color: $cor-primaria;
+      height: 50vh;
+      width: 200px;
+      top: 50px;
+      left: 0vh;
+
+      li {
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+        a {
+          color: $titulo-1;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  &__title {
+    text-align: center;
+    color: $titulo-1;
+    font-weight: bold;
+    font-size: 28px;
+    max-width: 320px;
+    width: 100%;
+    margin: 20px auto 0;
+
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+@mixin transition {
+  @for $i from 1 through 11 {
+    div:nth-child(#{$i}) {
+      @keyframes example-#{$i} {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(8px + $i);
+          opacity: calc($i / 16);
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin-top: 20px;
+
+  @include transition;
+
+  @for $i from 1 through 11 {
+    div:nth-child(#{$i}) {
+      display: inline-block;
+      text-shadow: 2px 2px 3px #3D6366;
+      animation-name: example-#{$i};
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay:(#{$i*0.2s});
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
