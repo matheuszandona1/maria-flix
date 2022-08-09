@@ -1,87 +1,426 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>maria-flix</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/styles.scss">
+
+  <title>Mona e Ed Flix</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__container">
-      <div class="header__mobile">
-        <div id="navMenu" class="navmenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <nav class="header__nav">
-          <li>
-            <a href="#">Séries que você ama</a>
-          </li>
-          <li>
-            <a href="#">Filmes que você ama</a>
-          </li>
-          <li>
-            <a href="#">Os que iremos ver</a>
-          </li>
-          <li>
-            <a href="#">O que estamos vendo</a>
-          </li>
 
-        </nav>
+  <header class="cabecalho" id="idCabecalho">
+    <div class="container">
+      <!-- LOGO -->
+      <figure class="cabecalho__logo">
+        <!-- IMAGEM -->
+        <img src="./assets/logo-maria.svg" class="logo" alt="Logo Mona e Ed Flix">
+        <figcaption hidden>Logo marca MariaFlix</figcaption>
+      </figure>
+
+      <!-- MENU DE NAVEGAÇÃO -->
+      <nav class="cabecalho__menu">
+
+        <!-- LISTA DE LINKS -->
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Séries</a>
+          </li>
+          <li>
+            <a href="elaama">Filmes que ela ama</a>
+          </li>
+          <li>
+            <a href="#">Séries que ela ama</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="cabecalho__menuConfiguracao">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/pesquisa.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">MARIA</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/presente.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/notificacao.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/ProfileIMG.png" alt="">
+            </a>
+          </li>
+        </ul>
       </div>
-
-      <svg preserveAspectRatio="none" width="181" height="37" viewBox="0 0 181 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.375 13.3554L6.86886 12.6356L13.4699 23.4551L13.6719 23.4227L16.5635 11.0828L21.0573 10.363L23.8179 27.5979L20.2834 28.164L18.4866 16.9462L18.3435 16.9691L15.6666 28.8172L13.2598 29.2027L7.00959 18.7414L6.86652 18.7643L8.67005 30.0242L5.13555 30.5903L2.375 13.3554Z" fill="#FF0000" />
-        <path d="M34.6883 26.2749L30.7563 26.6969L34.8848 8.69898L39.6133 8.19147L47.4587 24.9042L43.5267 25.3262L37.7425 12.4038L37.6069 12.4184L34.6883 26.2749ZM33.7103 19.4796L42.9979 18.4828L43.3053 21.347L34.0178 22.3439L33.7103 19.4796Z" fill="#FF0000" />
-        <path d="M54.4638 24.3571L53.3955 6.93524L60.2689 6.51375C61.5846 6.43307 62.722 6.59956 63.6809 7.01323C64.6452 7.42089 65.3974 8.03793 65.9376 8.86437C66.4832 9.68479 66.7913 10.6706 66.8619 11.8219C66.9328 12.9788 66.7443 13.9894 66.2964 14.8536C65.8481 15.7122 65.164 16.3917 64.244 16.8922C63.3297 17.3923 62.2034 17.6833 60.865 17.7654L56.2628 18.0476L56.0813 15.0873L60.088 14.8416C60.7912 14.7985 61.3694 14.6662 61.8226 14.4449C62.2758 14.2235 62.604 13.9131 62.8072 13.5136C63.0161 13.1137 63.103 12.6273 63.0679 12.0545C63.0324 11.4761 62.8862 10.9955 62.6294 10.6128C62.3782 10.2297 62.011 9.9505 61.5277 9.7752C61.0498 9.59389 60.4564 9.52496 59.7475 9.56843L57.2636 9.72076L58.1472 24.1312L54.4638 24.3571ZM63.3861 15.8518L68.2022 23.5146L64.136 23.7639L59.4135 16.0954L63.3861 15.8518Z" fill="#FF0000" />
-        <path d="M78.5611 5.74238L79.0321 23.1906L75.3431 23.2902L74.8721 5.84197L78.5611 5.74238Z" fill="#FF0000" />
-        <path d="M90.2514 23.0413L86.297 23.0043L92.4854 5.60684L97.2409 5.65127L103.095 23.1613L99.1402 23.1243L94.8941 9.61815L94.7577 9.61688L90.2514 23.0413ZM90.0684 16.1785L99.4089 16.2657L99.3819 19.1463L90.0414 19.059L90.0684 16.1785Z" fill="#FF0000" />
-        <path d="M110.118 23.437L111.06 6.0079L122.6 6.63142L122.436 9.66961L114.581 9.24519L114.357 13.3982L121.446 13.7813L121.281 16.8194L114.192 16.4364L113.803 23.6361L110.118 23.437Z" fill="#FF0000" />
-        <path d="M129.97 24.6804L131.616 7.30372L135.29 7.6518L133.931 21.9995L141.381 22.7053L141.094 25.7343L129.97 24.6804Z" fill="#FF0000" />
-        <path d="M154.645 9.79896L152.441 27.1137L148.78 26.6476L150.984 9.33285L154.645 9.79896Z" fill="#FF0000" />
-        <path d="M166.828 11.5331L169.336 17.9743L169.471 17.9964L173.926 12.7002L178.039 13.3764L171.367 21.1238L175.324 30.6191L171.136 29.9304L168.571 23.4712L168.436 23.449L163.938 28.7467L159.766 28.0608L166.573 20.3356L162.699 10.8541L166.828 11.5331Z" fill="#FF0000" />
-      </svg>
     </div>
   </header>
-  <main class="main">
-    <h1>
-      <div>C</div>
-      <div>O</div>
-      <div>M</div>
-      <div>I</div>
-      <div>N</div>
-      <div>G</div>
-      <div></div>
-      <div>S</div>
-      <div>O</div>
-      <div>O</div>
-      <div>N</div>
-    </h1>
+
+  <main>
+    <section class="secaoDestaque">
+      <div class="container">
+
+
+        <!-- CONTEÚDO DESTAQUE -->
+        <article class="secaoDestaque__descricaoDestaque">
+          <h1>Gilmore Girls</h1>
+          <p>Em destaque temos uma série que maduzinha adora ver. A história acompanha a vida de Lorelai Gilmore, uma mãe solteira que cria sua filha adolescente Rory, na cidade de Stars Hollow em Connecticut. </p>
+        </article>
+
+        <!-- LINKS DE NAVEGAÇÃO -->
+        <div class="secaoDestaque__navegacaoDestaque">
+          <a href="https://www.netflix.com/watch/80014130?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126_titles%2F1%2F%2Fgilmore%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126_titles%2F1%2F%2Fgilmore%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126%7C1%2CtitlesResults%2C70155618" target="_blank"><img src="./assets/assistir.png" alt="Icon play">Assistir</a>
+          <a href="#" class="secaoDestaque__navegacaoDestaque--transparente"><img src="./assets/info.png" alt="Icon play">Mais informações</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO FILMES EM ALTA -->
+    <section class="secaoFilmes">
+
+      <div class="container">
+        <!-- TÍTULO DA SEÇÃO -->
+        <h2>Ela ama</h2>
+
+        <!-- LISTA DE FILMES -->
+        <ul class="secaoFilmes__listaFilmes elaama">
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/81289281?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774_titles%2F1%2F%2Femily%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774_titles%2F1%2F%2Femily%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774%7C1%2CtitlesResults%2C81037371" target="_blank">
+                <img src="./assets/emilyinparis.png" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/detail/0GDP096ORVZ7V5R0WBBSDP04G5/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/thisisus.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure><a href="https://www.netflix.com/watch/80060553?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444_titles%2F1%2F%2Fjane%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444_titles%2F1%2F%2Fjane%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444%7C1%2CtitlesResults%2C" target="_blank">
+                <img src="./assets/jane.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/detail/0QSVLAIXBCD99WN7PJ33JTQZJJ/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/comoeuera.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/detail/0KVQAAI5LR5DXQUXVFX8UZPCO4/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/modernlove.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/detail/0PHZX7BXXDG06UZHHWCA4INKVK/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/simplesmente.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTINUAR ASSISTINDO -->
+    <section class="secaoFilmes secaoFilmes--progressoFilmes">
+
+      <div class="container">
+        <!-- TÍTULO DA SEÇÃO -->
+        <h2>Filmes que gostamos</h2>
+
+        <!-- LISTA DE FILMES -->
+        <ul class="secaoFilmes__listaFilmes">
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80203147?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190360882_titles%2F1%2F%2Fpara%20todos%20os%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190360882_titles%2F1%2F%2Fpara%20todos%20os%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190360882%7C1%2CtitlesResults%2C" target="_blank">
+                <img src="./assets/garotosqueamei.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/region/na/detail/0G1073PWBZTFJBYU475MWBQPGZ/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/palavras.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/region/na/detail/0I5O5QBPDCROOE5AE3CL6LT6XZ/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/corra.webp" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/region/na/detail/0FJWBCL8OMLZ4BIHT7RYH54Z97/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/aboutime.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/60033311?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190508428_titles%2F1%2F%2Fcomo%20se%20fosse%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190508428_titles%2F1%2F%2Fcomo%20se%20fosse%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190508428%7C1%2CtitlesResults%2C" target="_blank">
+                <img src="./assets/primeiravez.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80048061?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190468725_titles%2F1%2F%2Fhotel%20tran%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190468725_titles%2F1%2F%2Fhotel%20tran%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190468725%7C1%2CtitlesResults%2C80048061" target="_blank">
+                <img src="./assets/hotel.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="secaoFilmes">
+
+      <div class="container">
+        <!-- TÍTULO DA SEÇÃO -->
+        <h2>As séries favoritas</h2>
+
+        <!-- LISTA DE FILMES -->
+        <ul class="secaoFilmes__listaFilmes">
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80014130?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126_titles%2F1%2F%2Fgilmore%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126_titles%2F1%2F%2Fgilmore%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189694126%7C1%2CtitlesResults%2C70155618" target="_blank">
+                <img src="./assets/mainthumb.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/region/na/detail/0H7JFOPK2QO9WVZ8D9D0J5ZRQN/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/theoffice.webp" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.primevideo.com/detail/0GDP096ORVZ7V5R0WBBSDP04G5/ref=atv_dp_share_cu_r" target="_blank">
+                <img src="./assets/thisisus.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure><a href="https://www.netflix.com/watch/80060553?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444_titles%2F1%2F%2Fjane%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444_titles%2F1%2F%2Fjane%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190156444%7C1%2CtitlesResults%2C" target="_blank">
+                <img src="./assets/jane.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/81289281?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774_titles%2F1%2F%2Femily%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774_titles%2F1%2F%2Femily%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-189774774%7C1%2CtitlesResults%2C81037371" target="_blank">
+                <img src="./assets/emilyinparis.png" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80232920?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010_titles%2F1%2F%2Fbridgerton%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010_titles%2F1%2F%2Fbridgerton%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010%7C1%2CtitlesResults%2C" target="_blank">
+
+                <img src="./assets/bridgerton.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80232920?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010_titles%2F1%2F%2Fbridgerton%2F0%2F0%2CNAPA%40%40%7C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010_titles%2F1%2F%2Fbridgerton%2F0%2F0%2Cunknown%2C%2C143d7f77-11b4-4fe9-83cc-dc4f2b5337b5-190659010%7C1%2CtitlesResults%2C" target="_blank">
+                <img src="./assets/thegoodplace.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="secaoFilmes">
+
+      <div class="container">
+        <!-- TÍTULO DA SEÇÃO -->
+        <h2>Os filmes favoritos dela</h2>
+
+        <!-- LISTA DE FILMES -->
+        <ul class="secaoFilmes__listaFilmes">
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/81115192?source=35" target="_blank">
+                <img src="./assets/sefundachance.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/70112367?source=35" target="_blank">
+                <img src="./assets/olharparaiso.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/60034545?source=35" target="_blank">
+                <img src="./assets/brilhoeterno.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./assets/monsieu.jpg" alt="Filme 1">
+              <figcaption>Filme 1</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a href="https://www.netflix.com/watch/80184625?source=35" target="_blank">
+                <img src="./assets/perfeitapvc.jpg" alt="Filme 1">
+                <figcaption>Filme 1</figcaption>
+              </a>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
+  <!-- RODAPÉ -->
+  <footer class="rodape">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <div class="container">
+      <!-- REDES SOCIAIS  -->
+      <div class="rodape__midiasSociais">
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./assets/fb.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./assets/ig.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./assets/tt.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./assets/yt.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
 
-  <script>
-    $(".navmenu").click(function (e) {
-      $(this).parent().find(".header__nav").toggleClass('ativo');
-    })
-  </script>
+      <nav class="rodape__menuNavegacao">
+        <ul>
+          <li>
+            <a href="#">Idioma e legendas</a>
+          </li>
+          <li>
+            <a href="#">Imprensa</a>
+          </li>
+          <li>
+            <a href="#">Privacidade</a>
+          </li>
+          <li>
+            <a href="#">Entre em contato para criticar a lista dele</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Audiodescrição</a>
+          </li>
+          <li>
+            <a href="#">Relações com investidores</a>
+          </li>
+          <li>
+            <a href="#">Avisos legais</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Centro de ajuda</a>
+          </li>
+          <li>
+            <a href="#">Carreiras</a>
+          </li>
+          <li>
+            <a href="#">Preferências de cookies</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Cartão pré-pago</a>
+          </li>
+          <li>
+            <a href="#">Termos de uso</a>
+          </li>
+          <li>
+            <a href="#">Informações corporativas</a>
+          </li>
+        </ul>
+      </nav>
 
-  <script>
-    const navMenu = document.querySelector('#navMenu');
-    navMenu.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    })
-  </script>
+      <a href="#" class="rodape__linkCodigo">Código do serviço</a>
+
+      <p>© 2022 MariaFlix, Inc.</p>
+    </div>
+  </footer>
 
 </body>
 
